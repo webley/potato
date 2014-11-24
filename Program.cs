@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using potato.Processors;
 
 namespace potato
 {
@@ -11,6 +7,9 @@ namespace potato
         static void Main(string[] args)
         {
             var user = new User {Username = "dave", FirstName = "Dave", LastName = "Awesome", PotatoScore = 99};
+
+            var userProcessor = new UserProcessor();
+            var token = userProcessor.Login("dmw", "awesome");
         }
     }
 }
